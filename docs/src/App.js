@@ -1,6 +1,6 @@
 import * as THREE from '../vendor/three.module.js';
 import { Environment } from './Environment.js';
-import { ObjectController } from './ObjectController.js';
+import { ObjectController } from './ObjectController.js?v=chair65';
 import { UIController } from './UIController.js';
 import { ARController } from './ARController.js';
 
@@ -26,7 +26,7 @@ export class App {
       this.ar.update(frame); this.object.update(dt);
       if(this.mode!=='ar') {
         this.camera.position.set(Math.sin(this.angle)*2.5,1.45,Math.cos(this.angle)*2.5);
-        this.camera.lookAt(0,0.63,0);
+        this.camera.lookAt(0,this.object.type==='chair'?0.4:0.63,0);
       }
       this.floor.visible=this.mode==='preview';
       if(!this.renderer.xr.isPresenting) {

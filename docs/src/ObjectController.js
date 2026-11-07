@@ -16,6 +16,7 @@ export class ObjectController {
   }
   changeModel(type) {
     const next = this.factory.create(type);
+    if (type === 'chair') next.scale.setScalar(0.65);
     if (this.model) {
       this.pivot.remove(this.model);
       const geometries = new Set(), materials = new Set();
