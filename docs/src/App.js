@@ -32,7 +32,7 @@ export class App {
       if(!this.renderer.xr.isPresenting) {
         const mobilePreview=this.mode==='preview' && innerWidth<=600;
         const bottom=mobilePreview?this.ui.$('hud').getBoundingClientRect().height+28:0;
-        const top=mobilePreview?76:0;
+        const top=mobilePreview?12:0;
         const height=Math.max(100,innerHeight-bottom-top);
         this.renderer.setViewport(0,bottom,innerWidth,height);
         this.camera.aspect=innerWidth/height;

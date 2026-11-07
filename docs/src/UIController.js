@@ -20,7 +20,7 @@ export class UIController {
     document.body.classList.toggle('ar',mode==='ar');
     this.$('intro').hidden=mode!=='intro'; this.$('hud').hidden=mode==='intro';
     this.$('place').hidden=mode!=='ar'; this.$('reset').hidden=true;
-    if(mode==='preview') this.status('Потяните по сцене, чтобы осмотреть мебель.');
+    if(mode==='preview') this.status('Потяните по сцене, чтобы изменить обзор.');
   }
   placement(placed,canPlace) {
     this.$('place').hidden=placed; this.$('place').disabled=!canPlace;

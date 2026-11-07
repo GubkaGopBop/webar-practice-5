@@ -10,19 +10,16 @@
 </head>
 <body>
   <main id="overlay">
-    <header class="brand"><span class="mark">F</span><div>Мебель в AR<small>Практическая работа 5</small></div></header>
     <section id="intro" class="card">
-      <span class="eyebrow">ВАШЕ ПРОСТРАНСТВО</span>
-      <h1>Примерьте мебель<br>к своей комнате.</h1>
-      <p>Выберите модель и цвет, поверните её и разместите на полу в натуральном размере.</p>
+      <h1>Мебель в AR</h1>
+      <p class="hint">Найдите пол и разместите объект.</p>
       <button id="start" disabled>Открыть AR</button>
       <button id="preview" class="secondary">Посмотреть в 3D</button>
       <p id="support" class="hint" role="status">Проверяем поддержку AR…</p>
     </section>
     <section id="hud" class="card" hidden>
-      <div class="panel-title"><strong>Настроить объект</strong><button id="exit" class="text">Выйти</button></div>
-      <label>Модель<select id="model"><option value="chair">Офисное кресло</option><option value="stool">Барный табурет</option></select></label>
-      <div class="row"><label class="color-label">Цвет обивки<input id="color" type="color" value="#345e57"></label><label class="toggle"><input id="auto" type="checkbox"> Автовращение</label></div>
+      <div class="model-row"><label class="model-label"><span class="sr-only">Модель</span><select id="model"><option value="chair">Офисное кресло</option><option value="stool">Барный табурет</option></select></label><button id="exit" class="text">Выйти</button></div>
+      <div class="row"><label class="color-label">Цвет<input id="color" type="color" value="#345e57"></label><label class="toggle"><input id="auto" type="checkbox"> Автовращение</label></div>
       <div class="row"><button id="left" class="secondary" aria-label="Повернуть влево на 15 градусов">↶ −15°</button><button id="right" class="secondary" aria-label="Повернуть вправо на 15 градусов">+15° ↷</button></div>
       <p id="status" class="hint" role="status" aria-live="polite"></p>
       <button id="place" disabled>Разместить здесь</button><button id="reset" class="secondary" hidden>Выбрать другое место</button>
